@@ -42,10 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Instruction.cs" />
-    <Compile Include="InstructionParser.cs" />
-    <Compile Include="Parameters\IParameter.cs" />
-    <Compile Include="Parameters\RegistryParameter.cs" />
+    <Compile Include="Parameters\ConditionOperand.cs" />
+    <Compile Include="Parameters\Conditions.cs" />
+    <Compile Include="Parameters\LabelOperand.cs" />
+    <Compile Include="Parsers\SFileParser.cs" />
+    <Compile Include="Instructions\Instruction.cs" />
+    <Compile Include="Instructions\InstructionParser.cs" />
+    <Compile Include="Instructions\Instructions.cs" />
+    <Compile Include="Parameters\ImmediateOperand.cs" />
+    <Compile Include="Parameters\IOperand.cs" />
+    <Compile Include="Parameters\StackPointerOperand.cs" />
+    <Compile Include="Parameters\RegistryOperand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
