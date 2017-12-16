@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Instructions\InstructionParserTests.cs" />
+    <Compile Include="ProgramTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +68,11 @@
       <Project>{FE910243-0855-422B-8A93-4EEAC1F694A6}</Project>
       <Name>P-ARM_AssemblyParser</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="calculator.s">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

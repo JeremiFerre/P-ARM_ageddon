@@ -22,7 +22,7 @@ namespace P_ARM_AssemblyParser.Parameters
 
         public string GetPattern()
         {
-            return @"\w+";
+            return @"[\._\w\d]+";
         }
 
         public bool HasToBeParsed()

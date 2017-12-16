@@ -79,7 +79,7 @@ namespace P_ARM_AssemblyParser.Instructions
             Match operandIsPresent;
             string matchedSyntax = Regex.Match(regexedText, Syntax, InstructionParser.Options).Value;
             toMatch = new Regex(matchedSyntax);
-            string currentText = toMatch.Replace(regexedText, "");
+            string currentText = toMatch.Replace(regexedText, "", 1);
             string currentOperand;
             Int16 parsedOperand;
             List<Tuple<int, Tuple<Int16, int>>> operandsConverted = new List<Tuple<int, Tuple<Int16, int>>>();

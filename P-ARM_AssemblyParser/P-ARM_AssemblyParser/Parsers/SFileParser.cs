@@ -1,4 +1,5 @@
 ﻿using P_ARM_AssemblyParser.Instructions;
+using P_ARM_AssemblyParser.Parameters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,12 +33,13 @@ namespace P_ARM_AssemblyParser.Parsers
                 catch (Exception) {}
             }
 
-            return convertedFile;
+            return convertedFile.ToLower();
         }
 
         private static Dictionary<string, short> GetLabelsLines(List<string> wholeFile)
         {
             Dictionary<string, short> labelsLines = new Dictionary<string, short>();
+            string pattern = new LabelOperand().GetPattern();
 
             Match match;
             short numLine = 1;
@@ -45,9 +47,9 @@ namespace P_ARM_AssemblyParser.Parsers
             {
                 try
                 {
-                    match = Regex.Match(line, @"^((\t*\s*\t*)|(\s*\t*\s*))\w+:", InstructionParser.Options);
+                    match = Regex.Match(line, @"^((\t*\s*\t*)|(\s*\t*\s*))" + pattern + ":", InstructionParser.Options);
                     if (match.Success)
-                        labelsLines.Add(Regex.Match(match.Value, @"\w+:").Value.Replace(":", "").ToUpper(), numLine);
+                        labelsLines.Add(Regex.Match(match.Value, pattern + ":").Value.Replace(":", "").ToUpper(), numLine);
                     
                     numLine++;
                 }
