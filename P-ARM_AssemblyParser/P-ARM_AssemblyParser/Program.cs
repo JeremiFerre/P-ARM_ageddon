@@ -1,5 +1,4 @@
-﻿using P_ARM_AssemblyParser.Instructions;
-using P_ARM_AssemblyParser.Parsers;
+﻿using P_ARM_AssemblyParser.Parsers;
 using System;
 using System.IO;
 
@@ -16,14 +15,11 @@ namespace P_ARM_AssemblyParser
             string parsedFile = SFileParser.ParseFile(args[0]);
 
             // Write into the new logisim file
-            string logisimHeader = "v2.0 raw\n";
+            string logisimHeader = "v2.0 raw";
             
             File.WriteAllLines(Path.GetDirectoryName(Path.GetFullPath(args[0])) + @"\" + Path.GetFileNameWithoutExtension(args[0]) + "_logisim.txt", new string[] { logisimHeader, parsedFile });
-
-            Console.WriteLine(logisimHeader);
-            Console.WriteLine(parsedFile);
-            Console.WriteLine("End program...");
-            Console.ReadKey();
+            
+            Console.WriteLine("\n" + (parsedFile.Length > 0 ? parsedFile.Split(' ').Length : 0) + " instructions were correctly parsed.\n");
         }
     }
 }

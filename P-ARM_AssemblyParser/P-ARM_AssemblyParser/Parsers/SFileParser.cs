@@ -3,9 +3,7 @@ using P_ARM_AssemblyParser.Parameters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace P_ARM_AssemblyParser.Parsers
 {
@@ -20,15 +18,17 @@ namespace P_ARM_AssemblyParser.Parsers
 
             InstructionParser parser;
             short convertedIntruction;
-            string convertedFile = "";
+            string convertedFile = "", line;
 
-            foreach (string line in allLines)
+            for (int i = 0; i < allLines.Count; i++)
             {
+                line = allLines[i];
+
                 try
                 {
-                    parser = new InstructionParser(line.ToUpper());
+                    parser = new InstructionParser(line);
                     convertedIntruction = parser.ParseInstruction();
-                    convertedFile += convertedIntruction.ToString("X2") + " ";
+                    convertedFile += convertedIntruction.ToString("X2") + (i == allLines.Count - 1 ? "" : " ");
                 }
                 catch (Exception) {}
             }
@@ -43,6 +43,7 @@ namespace P_ARM_AssemblyParser.Parsers
 
             Match match;
             short numLine = 1;
+            InstructionParser parser;
             foreach (string line in wholeFile)
             {
                 try
@@ -50,8 +51,16 @@ namespace P_ARM_AssemblyParser.Parsers
                     match = Regex.Match(line, @"^((\t*\s*\t*)|(\s*\t*\s*))" + pattern + ":", InstructionParser.Options);
                     if (match.Success)
                         labelsLines.Add(Regex.Match(match.Value, pattern + ":").Value.Replace(":", "").ToUpper(), numLine);
-                    
-                    numLine++;
+                    else
+                    {
+                        parser = new InstructionParser(line);
+                        try
+                        {
+                            parser.ParseInstruction();
+                            numLine++;
+                        }
+                        catch (InstructionException) {}
+                    }
                 }
                 catch (Exception) {}
             }

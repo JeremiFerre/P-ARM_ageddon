@@ -68,7 +68,7 @@ namespace P_ARM_AssemblyParser.Instructions
         {
             Match match;
             if ((match = IsValid(text)) == null)
-                throw new Exception("Intruction cannot be parsed: " + text);
+                throw new InstructionException("Intruction cannot be parsed: " + text);
 
             // Séparation des éléments de la chaine
             Int16 hexaConverted;

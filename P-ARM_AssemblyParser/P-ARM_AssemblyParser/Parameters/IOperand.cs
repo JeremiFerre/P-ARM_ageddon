@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace P_ARM_AssemblyParser
+﻿namespace P_ARM_AssemblyParser
 {
     public interface IOperand
     {

@@ -14,7 +14,7 @@ namespace P_ARM_AssemblyParser.Instructions
         /// <param name="instruction">The line to parse</param>
         public InstructionParser(string instruction)
         {
-            string cleanInstruction = instruction;
+            string cleanInstruction = instruction.ToUpper();
             if (Regex.IsMatch(instruction, @"\["))
                 cleanInstruction = cleanInstruction.Replace("[", "");
             if (Regex.IsMatch(instruction, @"\]"))
