@@ -17,7 +17,7 @@ namespace P_ARM_AssemblyParser
             // Write into the new logisim file
             string logisimHeader = "v2.0 raw";
             
-            File.WriteAllLines(Path.GetDirectoryName(Path.GetFullPath(args[0])) + @"\" + Path.GetFileNameWithoutExtension(args[0]) + "_logisim.txt", new string[] { logisimHeader, parsedFile });
+            File.WriteAllLines(Path.GetDirectoryName(Path.GetFullPath(args[0])) + @"/" + Path.GetFileNameWithoutExtension(args[0]) + "_logisim.txt", new string[] { logisimHeader, parsedFile });
             
             Console.WriteLine("\n" + (parsedFile.Length > 0 ? parsedFile.Split(' ').Length : 0) + " instructions were correctly parsed.\n");
         }

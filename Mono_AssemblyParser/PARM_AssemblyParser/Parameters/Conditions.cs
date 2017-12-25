@@ -6,34 +6,34 @@ namespace P_ARM_AssemblyParser.Parameters
     public enum Conditions
     {
         // Egalité
-        EQ = 0b0000,
+		EQ = 0,
         // Différence
-        NE = 0b0001,
+        NE = 1,
         // Retenue
-        CS = 0b0010,
+        CS = 2,
         // Pas de retenue
-        CC = 0b0011,
+        CC = 3,
         // Négatif
-        MI = 0b0100,
+        MI = 4,
         // Positif ou nul
-        PL = 0b0101,
+        PL = 5,
         // Dépassement de capacité
-        VS = 0b0110,
+        VS = 6,
         // Pas de dépassement de capacité
-        VC = 0b0111,
+        VC = 7,
         // Supérieur (non signé)
-        HI = 0b1000,
+        HI = 8,
         // Inférieur ou égal (non signé)
-        LS = 0b1001,
+        LS = 9,
         // Supérieur ou égal (signé)
-        GE = 0b1010,
+        GE = 10,
         // Inférieur (signé)
-        LT = 0b1011,
+        LT = 11,
         // Supérieur (signé)
-        GT = 0b1100,
+        GT = 12,
         // Inférieur ou égal
-        LE = 0b1101,
+        LE = 13,
         // Valeur par défaut, toujours vrai
-        AL = 0b1110
+        AL = 14
     }
 }

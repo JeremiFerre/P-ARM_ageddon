@@ -28,6 +28,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="Instructions\Instruction.cs" />
+    <Compile Include="Instructions\InstructionException.cs" />
+    <Compile Include="Instructions\InstructionParser.cs" />
+    <Compile Include="Instructions\Instructions.cs" />
+    <Compile Include="Parameters\ConditionOperand.cs" />
+    <Compile Include="Parameters\Conditions.cs" />
+    <Compile Include="Parameters\IOperand.cs" />
+    <Compile Include="Parameters\ImmediateOperand.cs" />
+    <Compile Include="Parameters\LabelOperand.cs" />
+    <Compile Include="Parameters\RegistryOperand.cs" />
+    <Compile Include="Parameters\StackPointerOperand.cs" />
+    <Compile Include="Parsers\SFileParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
