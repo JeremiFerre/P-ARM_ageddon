@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="2.13.22" version="1.0">
+<project source="2.14.2" version="1.0">
 This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
 <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -186,16 +186,16 @@ end TCL_Generic;
       <rect height="4" stroke="none" width="10" x="210" y="238"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="204" y="64">PC</text>
       <rect height="20" stroke="none" width="150" x="60" y="310"/>
-      <circ-port height="10" pin="1320,210" width="10" x="215" y="255"/>
-      <circ-port height="10" pin="1320,270" width="10" x="215" y="235"/>
-      <circ-port height="10" pin="1320,460" width="10" x="215" y="215"/>
       <circ-port height="8" pin="130,230" width="8" x="46" y="56"/>
-      <circ-port height="10" pin="1320,360" width="10" x="215" y="155"/>
-      <circ-port height="10" pin="1320,510" width="10" x="215" y="175"/>
-      <circ-port height="8" pin="100,530" width="8" x="46" y="116"/>
       <circ-port height="10" pin="1320,410" width="10" x="215" y="195"/>
       <circ-port height="10" pin="1340,1160" width="10" x="215" y="55"/>
+      <circ-port height="10" pin="1320,360" width="10" x="215" y="155"/>
+      <circ-port height="10" pin="1320,210" width="10" x="215" y="255"/>
+      <circ-port height="10" pin="1320,460" width="10" x="215" y="215"/>
+      <circ-port height="8" pin="100,530" width="8" x="46" y="116"/>
       <circ-port height="10" pin="1320,170" width="10" x="215" y="135"/>
+      <circ-port height="10" pin="1320,510" width="10" x="215" y="175"/>
+      <circ-port height="10" pin="1320,270" width="10" x="215" y="235"/>
       <rect fill="none" height="280" stroke="#000000" stroke-width="2" width="150" x="60" y="50"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="139" y="325">Controller</text>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="207" y="285">DP_Shift</text>
@@ -401,80 +401,14 @@ end TCL_Generic;
     <wire from="(280,1250)" to="(1120,1250)"/>
     <wire from="(1160,790)" to="(1160,1090)"/>
     <wire from="(310,990)" to="(1020,990)"/>
-    <comp lib="0" loc="(1320,510)" name="Pin">
+    <comp lib="0" loc="(1320,460)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="3"/>
-      <a name="label" val="Rd"/>
+      <a name="label" val="Rn"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(100,610)" name="Pin">
-      <a name="label" val="Reset"/>
     </comp>
     <comp lib="3" loc="(1000,1080)" name="Adder"/>
-    <comp lib="8" loc="(314,54)" name="Text">
-      <a name="text" val="Extract carry"/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="1" loc="(700,530)" name="OR Gate">
-      <a name="width" val="4"/>
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="4" loc="(340,700)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="Stack_Pointer"/>
-    </comp>
-    <comp lib="1" loc="(1280,510)" name="OR Gate">
-      <a name="width" val="3"/>
-      <a name="size" val="30"/>
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(130,230)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="Inst"/>
-    </comp>
-    <comp lib="1" loc="(1160,1120)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(990,1050)" name="Constant">
-      <a name="facing" val="west"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="8" loc="(243,226)" name="Text">
-      <a name="text" val="Extract Opcode"/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(1340,1160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="PC"/>
-    </comp>
-    <comp lib="4" loc="(1120,1230)" name="Counter"/>
-    <comp lib="0" loc="(290,70)" name="Splitter">
-      <a name="fanout" val="1"/>
-      <a name="incoming" val="4"/>
-      <a name="bit0" val="none"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="none"/>
-      <a name="bit3" val="none"/>
-    </comp>
-    <comp lib="0" loc="(1320,410)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="3"/>
-      <a name="label" val="Rm"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(1320,210)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="5"/>
-      <a name="label" val="Imm5"/>
-    </comp>
-    <comp loc="(920,690)" name="Load_Store">
-      <a name="label" val="Load_Store_1"/>
-    </comp>
     <comp lib="0" loc="(230,230)" name="Splitter">
       <a name="fanout" val="1"/>
       <a name="incoming" val="16"/>
@@ -496,24 +430,9 @@ end TCL_Generic;
       <a name="bit14" val="0"/>
       <a name="bit15" val="0"/>
     </comp>
-    <comp lib="1" loc="(1280,360)" name="OR Gate">
+    <comp lib="0" loc="(100,530)" name="Pin">
       <a name="width" val="4"/>
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="0" loc="(1320,460)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="3"/>
-      <a name="label" val="Rn"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(950,1280)" name="Constant"/>
-    <comp lib="0" loc="(1320,710)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="RAM_Addr"/>
-      <a name="labelloc" val="east"/>
+      <a name="label" val="Flags"/>
     </comp>
     <comp lib="0" loc="(490,1150)" name="Splitter">
       <a name="fanout" val="4"/>
@@ -524,20 +443,50 @@ end TCL_Generic;
       <a name="bit2" val="1"/>
       <a name="bit3" val="0"/>
     </comp>
-    <comp loc="(920,530)" name="Flags_APSR"/>
-    <comp lib="0" loc="(100,530)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="label" val="Flags"/>
-    </comp>
-    <comp lib="0" loc="(1060,1110)" name="Constant">
-      <a name="facing" val="west"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(1320,780)" name="Pin">
+    <comp lib="0" loc="(1320,820)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="Load"/>
+      <a name="label" val="Store"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="8" loc="(243,226)" name="Text">
+      <a name="text" val="Extract Opcode"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp loc="(920,390)" name="Data_Processing">
+      <a name="label" val="Data_Processing_1"/>
+    </comp>
+    <comp lib="0" loc="(1320,710)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="RAM_Addr"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(920,690)" name="Load_Store">
+      <a name="label" val="Load_Store_1"/>
+    </comp>
+    <comp lib="8" loc="(1026,571)" name="Text">
+      <a name="text" val="Buffer flags for next instruction"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(100,610)" name="Pin">
+      <a name="label" val="Reset"/>
+    </comp>
+    <comp loc="(990,880)" name="SP_Address">
+      <a name="label" val="SP_Address_1"/>
+    </comp>
+    <comp lib="1" loc="(1160,1120)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1280,510)" name="OR Gate">
+      <a name="width" val="3"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(1280,460)" name="OR Gate">
+      <a name="width" val="3"/>
+      <a name="size" val="30"/>
     </comp>
     <comp lib="0" loc="(1320,110)" name="Pin">
       <a name="facing" val="west"/>
@@ -545,18 +494,49 @@ end TCL_Generic;
       <a name="label" val="DP_Shift"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp loc="(900,1090)" name="Conditional">
-      <a name="label" val="Conditional_1"/>
+    <comp lib="0" loc="(100,570)" name="Pin">
+      <a name="label" val="Clk"/>
     </comp>
-    <comp lib="0" loc="(1320,170)" name="Pin">
+    <comp lib="0" loc="(1320,780)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="Imm32_Enable"/>
+      <a name="label" val="Load"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="8" loc="(983,1022)" name="Text">
-      <a name="text" val="Add 3 to offset because ARM pre-increments PC"/>
+    <comp lib="0" loc="(900,1060)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="value" val="0x3"/>
+    </comp>
+    <comp lib="8" loc="(951,94)" name="Text">
+      <a name="text" val="IF Reg_Imm=1 THEN use shift value from register ELSE use shift value from Imm5"/>
       <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(290,70)" name="Splitter">
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="4"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+    </comp>
+    <comp loc="(920,530)" name="Flags_APSR"/>
+    <comp lib="0" loc="(1320,410)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rm"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(130,230)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Inst"/>
+    </comp>
+    <comp lib="0" loc="(1320,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+      <a name="label" val="Imm5"/>
     </comp>
     <comp lib="0" loc="(1320,70)" name="Pin">
       <a name="facing" val="west"/>
@@ -564,33 +544,13 @@ end TCL_Generic;
       <a name="label" val="Carry"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(100,570)" name="Pin">
-      <a name="label" val="Clk"/>
-    </comp>
-    <comp lib="2" loc="(1270,70)" name="Multiplexer">
-      <a name="enable" val="false"/>
-    </comp>
-    <comp loc="(920,390)" name="Data_Processing">
-      <a name="label" val="Data_Processing_1"/>
-    </comp>
-    <comp lib="1" loc="(1280,460)" name="OR Gate">
-      <a name="width" val="3"/>
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="1" loc="(1140,110)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="negate1" val="true"/>
+    <comp lib="8" loc="(314,54)" name="Text">
+      <a name="text" val="Extract carry"/>
+      <a name="font" val="SansSerif plain 12"/>
     </comp>
     <comp loc="(920,210)" name="Shift_Add_Sub_Mov">
       <a name="label" val="Shift_Add_Sub_Mov_1"/>
     </comp>
-    <comp lib="0" loc="(1320,820)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Store"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="3" loc="(1070,1140)" name="Adder"/>
     <comp lib="0" loc="(1320,360)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -598,39 +558,79 @@ end TCL_Generic;
       <a name="label" val="ALU_Opcode"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(1320,270)" name="Pin">
+    <comp lib="0" loc="(1340,1160)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="Imm32"/>
-    </comp>
-    <comp lib="0" loc="(900,1060)" name="Constant">
-      <a name="facing" val="south"/>
       <a name="width" val="8"/>
-      <a name="value" val="0x3"/>
+      <a name="label" val="PC"/>
+    </comp>
+    <comp lib="4" loc="(1120,1230)" name="Counter"/>
+    <comp lib="8" loc="(966,1037)" name="Text">
+      <a name="text" val="and does an additionnal prefect operation"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="4" loc="(340,700)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="Stack_Pointer"/>
+    </comp>
+    <comp lib="1" loc="(700,530)" name="OR Gate">
+      <a name="width" val="4"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(1140,110)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="negate1" val="true"/>
     </comp>
     <comp loc="(520,240)" name="Opcode_Decoder">
       <a name="label" val="Opcode_Decoder_1"/>
+    </comp>
+    <comp lib="1" loc="(1280,360)" name="OR Gate">
+      <a name="width" val="4"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="3" loc="(1070,1140)" name="Adder"/>
+    <comp lib="2" loc="(1270,70)" name="Multiplexer">
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(1060,1110)" name="Constant">
+      <a name="facing" val="west"/>
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="1" loc="(1280,410)" name="OR Gate">
       <a name="width" val="3"/>
       <a name="size" val="30"/>
       <a name="inputs" val="3"/>
     </comp>
-    <comp lib="8" loc="(951,94)" name="Text">
-      <a name="text" val="IF Reg_Imm=1 THEN use shift value from register ELSE use shift value from Imm5"/>
+    <comp lib="8" loc="(983,1022)" name="Text">
+      <a name="text" val="Add 3 to offset because ARM pre-increments PC"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
-    <comp lib="8" loc="(1026,571)" name="Text">
-      <a name="text" val="Buffer flags for next instruction"/>
-      <a name="font" val="SansSerif plain 12"/>
+    <comp lib="0" loc="(1320,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="Imm32"/>
     </comp>
-    <comp loc="(990,880)" name="SP_Address">
-      <a name="label" val="SP_Address_1"/>
+    <comp lib="0" loc="(950,1280)" name="Constant"/>
+    <comp lib="0" loc="(1320,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Imm32_Enable"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="8" loc="(966,1037)" name="Text">
-      <a name="text" val="and does an additionnal prefect operation"/>
-      <a name="font" val="SansSerif plain 12"/>
+    <comp lib="0" loc="(990,1050)" name="Constant">
+      <a name="facing" val="west"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp loc="(900,1090)" name="Conditional">
+      <a name="label" val="Conditional_1"/>
+    </comp>
+    <comp lib="0" loc="(1320,510)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rd"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
   <circuit name="Conditional">
@@ -657,10 +657,10 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="64">Offset</text>
       <rect height="3" stroke="none" width="10" x="240" y="79"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="84">Verified</text>
-      <circ-port height="10" pin="870,140" width="10" x="245" y="75"/>
-      <circ-port height="10" pin="870,100" width="10" x="245" y="55"/>
-      <circ-port height="8" pin="210,90" width="8" x="46" y="56"/>
       <circ-port height="8" pin="210,140" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="1020,150" width="10" x="245" y="75"/>
+      <circ-port height="8" pin="210,90" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="1020,100" width="10" x="245" y="55"/>
       <rect height="20" stroke="none" width="180" x="60" y="170"/>
       <rect fill="none" height="140" stroke="#000000" stroke-width="2" width="180" x="60" y="50"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="150" y="184">Conditional</text>
@@ -670,19 +670,7 @@ end TCL_Generic;
       <circ-port height="8" pin="210,270" width="8" x="46" y="136"/>
       <circ-anchor facing="east" height="6" width="6" x="247" y="57"/>
     </appear>
-    <comp lib="0" loc="(210,270)" name="Pin">
-      <a name="label" val="C"/>
-    </comp>
-    <comp lib="0" loc="(210,310)" name="Pin">
-      <a name="label" val="V"/>
-    </comp>
-    <comp lib="0" loc="(210,90)" name="Pin">
-      <a name="label" val="Enable"/>
-    </comp>
-    <comp lib="0" loc="(210,190)" name="Pin">
-      <a name="label" val="N"/>
-    </comp>
-    <comp lib="0" loc="(870,140)" name="Pin">
+    <comp lib="0" loc="(1020,150)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Verified"/>
@@ -691,7 +679,10 @@ end TCL_Generic;
     <comp lib="0" loc="(210,230)" name="Pin">
       <a name="label" val="Z"/>
     </comp>
-    <comp lib="0" loc="(870,100)" name="Pin">
+    <comp lib="0" loc="(210,310)" name="Pin">
+      <a name="label" val="V"/>
+    </comp>
+    <comp lib="0" loc="(1020,100)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
@@ -702,6 +693,15 @@ end TCL_Generic;
       <a name="width" val="16"/>
       <a name="label" val="Instruction"/>
     </comp>
+    <comp lib="0" loc="(210,190)" name="Pin">
+      <a name="label" val="N"/>
+    </comp>
+    <comp lib="0" loc="(210,270)" name="Pin">
+      <a name="label" val="C"/>
+    </comp>
+    <comp lib="0" loc="(210,90)" name="Pin">
+      <a name="label" val="Enable"/>
+    </comp>
   </circuit>
   <circuit name="Opcode_Decoder">
     <a name="circuit" val="Opcode_Decoder"/>
@@ -710,55 +710,243 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <comp lib="0" loc="(600,110)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Shift"/>
-      <a name="labelloc" val="east"/>
+    <wire from="(520,380)" to="(520,390)"/>
+    <wire from="(440,600)" to="(440,610)"/>
+    <wire from="(450,550)" to="(450,560)"/>
+    <wire from="(230,250)" to="(280,250)"/>
+    <wire from="(280,260)" to="(280,270)"/>
+    <wire from="(280,240)" to="(280,250)"/>
+    <wire from="(630,360)" to="(1240,360)"/>
+    <wire from="(630,520)" to="(1240,520)"/>
+    <wire from="(580,780)" to="(580,810)"/>
+    <wire from="(580,380)" to="(580,400)"/>
+    <wire from="(580,540)" to="(580,560)"/>
+    <wire from="(400,610)" to="(440,610)"/>
+    <wire from="(440,380)" to="(470,380)"/>
+    <wire from="(300,530)" to="(320,530)"/>
+    <wire from="(320,590)" to="(340,590)"/>
+    <wire from="(500,210)" to="(520,210)"/>
+    <wire from="(520,50)" to="(540,50)"/>
+    <wire from="(230,240)" to="(250,240)"/>
+    <wire from="(440,600)" to="(450,600)"/>
+    <wire from="(510,190)" to="(520,190)"/>
+    <wire from="(470,190)" to="(480,190)"/>
+    <wire from="(500,580)" to="(510,580)"/>
+    <wire from="(490,830)" to="(500,830)"/>
+    <wire from="(310,570)" to="(320,570)"/>
+    <wire from="(300,560)" to="(310,560)"/>
+    <wire from="(330,630)" to="(340,630)"/>
+    <wire from="(210,290)" to="(220,290)"/>
+    <wire from="(570,230)" to="(580,230)"/>
+    <wire from="(570,170)" to="(580,170)"/>
+    <wire from="(570,50)" to="(580,50)"/>
+    <wire from="(570,90)" to="(580,90)"/>
+    <wire from="(400,550)" to="(450,550)"/>
+    <wire from="(230,220)" to="(230,230)"/>
+    <wire from="(520,210)" to="(520,220)"/>
+    <wire from="(470,180)" to="(470,190)"/>
+    <wire from="(230,260)" to="(280,260)"/>
+    <wire from="(310,560)" to="(310,570)"/>
+    <wire from="(630,190)" to="(1240,190)"/>
+    <wire from="(230,280)" to="(230,300)"/>
+    <wire from="(630,70)" to="(1240,70)"/>
+    <wire from="(580,210)" to="(580,230)"/>
+    <wire from="(650,760)" to="(1250,760)"/>
+    <wire from="(560,560)" to="(580,560)"/>
+    <wire from="(560,500)" to="(580,500)"/>
+    <wire from="(490,420)" to="(520,420)"/>
+    <wire from="(580,740)" to="(600,740)"/>
+    <wire from="(580,780)" to="(600,780)"/>
+    <wire from="(500,380)" to="(520,380)"/>
+    <wire from="(230,270)" to="(250,270)"/>
+    <wire from="(190,290)" to="(210,290)"/>
+    <wire from="(340,590)" to="(350,590)"/>
+    <wire from="(340,630)" to="(350,630)"/>
+    <wire from="(570,400)" to="(580,400)"/>
+    <wire from="(570,340)" to="(580,340)"/>
+    <comp lib="1" loc="(530,830)" name="NOT Gate"/>
+    <comp lib="1" loc="(570,90)" name="NOT Gate"/>
+    <comp lib="0" loc="(470,210)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="C"/>
     </comp>
-    <comp lib="0" loc="(600,440)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Conditional"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="1" loc="(400,550)" name="AND Gate"/>
+    <comp lib="0" loc="(530,500)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="A"/>
     </comp>
-    <comp lib="0" loc="(600,280)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Load_Store"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="8" loc="(835,449)" name="Text">
+    <comp lib="1" loc="(630,70)" name="AND Gate"/>
+    <comp lib="8" loc="(1461,367)" name="Text">
       <a name="text" val="Conditional branch"/>
     </comp>
-    <comp lib="0" loc="(170,110)" name="Pin">
-      <a name="width" val="6"/>
-      <a name="label" val="Opcode"/>
+    <comp lib="0" loc="(520,50)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="A"/>
     </comp>
-    <comp lib="8" loc="(796,369)" name="Text">
-      <a name="text" val="SP Address"/>
-    </comp>
-    <comp lib="8" loc="(865,200)" name="Text">
-      <a name="text" val="Data Processing"/>
-    </comp>
-    <comp lib="0" loc="(600,190)" name="Pin">
+    <comp lib="1" loc="(580,740)" name="AND Gate"/>
+    <comp lib="1" loc="(650,760)" name="AND Gate"/>
+    <comp lib="0" loc="(1240,520)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Data_Processing"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(600,360)" name="Pin">
+    <comp lib="1" loc="(500,380)" name="NOT Gate"/>
+    <comp lib="1" loc="(340,590)" name="NOT Gate"/>
+    <comp lib="0" loc="(510,540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(530,760)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="0" loc="(1240,360)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Conditional"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1240,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Load_Store"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(570,340)" name="AND Gate"/>
+    <comp lib="0" loc="(310,630)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="F"/>
+    </comp>
+    <comp lib="1" loc="(630,190)" name="AND Gate"/>
+    <comp lib="1" loc="(340,630)" name="NOT Gate"/>
+    <comp lib="0" loc="(520,150)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(540,90)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="8" loc="(1500,529)" name="Text">
+      <a name="text" val="Data Processing"/>
+    </comp>
+    <comp lib="0" loc="(210,290)" name="Splitter">
+      <a name="fanout" val="6"/>
+      <a name="incoming" val="6"/>
+    </comp>
+    <comp lib="0" loc="(1240,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Shift"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(520,250)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="1" loc="(570,50)" name="NOT Gate"/>
+    <comp lib="0" loc="(300,530)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="C"/>
+    </comp>
+    <comp lib="1" loc="(510,190)" name="NOT Gate"/>
+    <comp lib="1" loc="(560,560)" name="AND Gate"/>
+    <comp lib="0" loc="(230,300)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(470,180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(530,720)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="C"/>
+    </comp>
+    <comp lib="0" loc="(250,270)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(520,320)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(280,270)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="C"/>
+    </comp>
+    <comp lib="0" loc="(230,220)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="F"/>
+    </comp>
+    <comp lib="0" loc="(520,360)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(250,240)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="E"/>
+    </comp>
+    <comp lib="0" loc="(190,290)" name="Pin">
+      <a name="width" val="6"/>
+      <a name="label" val="Opcode"/>
+    </comp>
+    <comp lib="0" loc="(530,790)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="1" loc="(630,360)" name="AND Gate"/>
+    <comp lib="1" loc="(570,400)" name="AND Gate"/>
+    <comp lib="0" loc="(310,590)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="E"/>
+    </comp>
+    <comp lib="0" loc="(490,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="8" loc="(1423,197)" name="Text">
+      <a name="text" val="Load/Store"/>
+    </comp>
+    <comp lib="8" loc="(1448,758)" name="Text">
+      <a name="text" val="SP Address"/>
+    </comp>
+    <comp lib="8" loc="(1410,77)" name="Text">
+      <a name="text" val="Shift, add, sub, mov"/>
+    </comp>
+    <comp lib="1" loc="(570,230)" name="AND Gate"/>
+    <comp lib="1" loc="(500,210)" name="NOT Gate"/>
+    <comp lib="0" loc="(1250,750)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="SP_Address"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="8" loc="(773,120)" name="Text">
-      <a name="text" val="Shift, add, sub, mov"/>
+    <comp lib="1" loc="(400,610)" name="AND Gate"/>
+    <comp lib="0" loc="(280,240)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="D"/>
     </comp>
-    <comp lib="8" loc="(791,289)" name="Text">
-      <a name="text" val="Load/Store"/>
+    <comp lib="0" loc="(300,560)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="D"/>
     </comp>
+    <comp lib="0" loc="(490,830)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="1" loc="(350,570)" name="NOT Gate"/>
+    <comp lib="1" loc="(580,810)" name="AND Gate"/>
+    <comp lib="0" loc="(440,380)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="C"/>
+    </comp>
+    <comp lib="1" loc="(630,520)" name="AND Gate"/>
+    <comp lib="1" loc="(570,170)" name="AND Gate"/>
+    <comp lib="1" loc="(560,500)" name="NOT Gate"/>
+    <comp lib="1" loc="(500,580)" name="AND Gate"/>
+    <comp lib="1" loc="(350,530)" name="NOT Gate"/>
   </circuit>
   <circuit name="Data_Processing">
     <a name="circuit" val="Data_Processing"/>
@@ -794,17 +982,6 @@ end TCL_Generic;
       <circ-port height="10" pin="800,250" width="10" x="265" y="135"/>
       <circ-anchor facing="east" height="6" width="6" x="267" y="57"/>
     </appear>
-    <comp lib="8" loc="(172,536)" name="Text">
-      <a name="text" val="Note 2: RSB instruction has Rn as 1st operand."/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(800,130)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="3"/>
-      <a name="label" val="Rd"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="8" loc="(346,74)" name="Text">
       <a name="text" val="Pull output low on Enable = 0"/>
       <a name="font" val="SansSerif plain 12"/>
@@ -823,11 +1000,40 @@ end TCL_Generic;
       <a name="label" val="Rm"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="8" loc="(172,536)" name="Text">
+      <a name="text" val="Note 2: RSB instruction has Rn as 1st operand."/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(210,110)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Instruction"/>
+    </comp>
+    <comp lib="8" loc="(382,309)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(800,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rd"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="8" loc="(274,556)" name="Text">
       <a name="text" val="MUL instruction has Rn as 1st operand and Rdm as 2nd operand"/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
-    <comp lib="8" loc="(382,309)" name="Text">
+    <comp lib="0" loc="(800,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="ALU_Opcode"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(210,150)" name="Pin">
+      <a name="label" val="Enable"/>
+    </comp>
+    <comp lib="8" loc="(327,576)" name="Text">
+      <a name="text" val="For simplification purposes, Rm is used for 1st operand both here and in the ALU."/>
       <a name="font" val="SansSerif plain 12"/>
     </comp>
     <comp lib="0" loc="(800,250)" name="Pin">
@@ -837,27 +1043,9 @@ end TCL_Generic;
       <a name="label" val="Flags_Update_Mask"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(800,210)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="label" val="ALU_Opcode"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(210,110)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="Instruction"/>
-    </comp>
     <comp lib="8" loc="(562,512)" name="Text">
       <a name="text" val="Note: instructions that does not save the result will still have the second operand as the destination register, the ALU will copy the second register to the destination register"/>
       <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="8" loc="(327,576)" name="Text">
-      <a name="text" val="For simplification purposes, Rm is used for 1st operand both here and in the ALU."/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(210,150)" name="Pin">
-      <a name="label" val="Enable"/>
     </comp>
   </circuit>
   <circuit name="Shift_Add_Sub_Mov">
@@ -906,25 +1094,16 @@ end TCL_Generic;
       <circ-port height="10" pin="570,500" width="10" x="265" y="95"/>
       <circ-anchor facing="east" height="6" width="6" x="267" y="97"/>
     </appear>
-    <comp lib="0" loc="(570,270)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Imm32_Enable"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(210,150)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Instruction"/>
     </comp>
-    <comp lib="0" loc="(570,430)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="5"/>
-      <a name="label" val="Imm5"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(210,200)" name="Pin">
+      <a name="label" val="Enable"/>
     </comp>
-    <comp lib="0" loc="(570,310)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="3"/>
-      <a name="label" val="Rm"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="8" loc="(309,659)" name="Text">
+      <a name="text" val="Note 2: MOV uses RSB ALU opcode with Imm8 reversed so that it is copied to output register"/>
+      <a name="font" val="SansSerif plain 12"/>
     </comp>
     <comp lib="0" loc="(570,390)" name="Pin">
       <a name="facing" val="west"/>
@@ -933,8 +1112,39 @@ end TCL_Generic;
       <a name="label" val="Rd"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="8" loc="(240,681)" name="Text">
+      <a name="text" val="Note 3: Imm32_Enable forces the use of the immediate for Rm register"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(570,150)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="ALU_Opcode"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(570,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Carry"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="8" loc="(301,634)" name="Text">
       <a name="text" val="Note: ALU uses Rn register for shifts. Use Rn instead of Rm for shifts (immediate) here too"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(839,275)" name="Text">
+      <a name="text" val="ALU will use Imm32 instead of Rm"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(570,430)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+      <a name="label" val="Imm5"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="8" loc="(312,519)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
     </comp>
     <comp lib="0" loc="(570,350)" name="Pin">
@@ -944,41 +1154,12 @@ end TCL_Generic;
       <a name="label" val="Rn"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(570,150)" name="Pin">
+    <comp lib="0" loc="(570,190)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
-      <a name="label" val="ALU_Opcode"/>
+      <a name="label" val="Flags_Update_Mask"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="8" loc="(309,659)" name="Text">
-      <a name="text" val="Note 2: MOV uses RSB ALU opcode with Imm8 reversed so that it is copied to output register"/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="8" loc="(240,681)" name="Text">
-      <a name="text" val="Note 3: Imm32_Enable forces the use of the immediate for Rm register"/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(570,230)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Carry"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="8" loc="(786,238)" name="Text">
-      <a name="text" val="Enable carry for SUB since it is reversed in ALU"/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(210,150)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="Instruction"/>
-    </comp>
-    <comp lib="8" loc="(839,275)" name="Text">
-      <a name="text" val="ALU will use Imm32 instead of Rm"/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(210,200)" name="Pin">
-      <a name="label" val="Enable"/>
     </comp>
     <comp lib="0" loc="(570,500)" name="Pin">
       <a name="facing" val="west"/>
@@ -987,19 +1168,26 @@ end TCL_Generic;
       <a name="label" val="Imm32"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="8" loc="(312,519)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(570,190)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="label" val="Flags_Update_Mask"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="8" loc="(116,234)" name="Text">
       <a name="text" val="Pull output low on Enable = 0"/>
       <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(786,238)" name="Text">
+      <a name="text" val="Enable carry for SUB since it is reversed in ALU"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(570,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Imm32_Enable"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(570,310)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rm"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
   <circuit name="Load_Store">
@@ -1028,14 +1216,14 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="102">RAM_Addr</text>
       <rect height="20" stroke="none" width="200" x="60" y="171"/>
       <rect fill="none" height="141" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
-      <circ-port height="10" pin="880,90" width="10" x="265" y="135"/>
-      <circ-port height="10" pin="880,210" width="10" x="265" y="55"/>
-      <circ-port height="8" pin="210,200" width="8" x="46" y="96"/>
       <circ-port height="8" pin="210,80" width="8" x="46" y="56"/>
-      <circ-port height="10" pin="880,320" width="10" x="265" y="95"/>
-      <circ-port height="10" pin="880,250" width="10" x="265" y="75"/>
-      <circ-port height="8" pin="210,130" width="8" x="46" y="76"/>
       <circ-port height="10" pin="880,130" width="10" x="265" y="115"/>
+      <circ-port height="10" pin="880,320" width="10" x="265" y="95"/>
+      <circ-port height="10" pin="880,90" width="10" x="265" y="135"/>
+      <circ-port height="8" pin="210,200" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="210,130" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="880,250" width="10" x="265" y="75"/>
+      <circ-port height="10" pin="880,210" width="10" x="265" y="55"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="186">Load_Store</text>
       <text fill="#404040" font-family="SansSerif" font-size="12" text-anchor="middle" x="74" y="124">Clk</text>
       <text fill="#404040" font-family="SansSerif" font-size="12" text-anchor="middle" x="82" y="144">Reset</text>
@@ -1049,20 +1237,16 @@ end TCL_Generic;
       <circ-anchor facing="east" height="6" width="6" x="267" y="57"/>
     </appear>
     <wire from="(880,210)" to="(880,220)"/>
+    <comp lib="8" loc="(1208,176)" name="Text">
+      <a name="text" val="Delay load and hold PC for 1 cycle for the RAM to send out requested data "/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
     <comp lib="0" loc="(880,320)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
       <a name="label" val="RAM_Addr"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="8" loc="(1208,176)" name="Text">
-      <a name="text" val="Delay load and hold PC for 1 cycle for the RAM to send out requested data "/>
-      <a name="font" val="SansSerif plain 12"/>
-    </comp>
-    <comp lib="0" loc="(210,200)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="label" val="Stack_Pointer"/>
     </comp>
     <comp lib="0" loc="(880,130)" name="Pin">
       <a name="facing" val="west"/>
@@ -1077,21 +1261,6 @@ end TCL_Generic;
       <a name="label" val="Rd"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(210,130)" name="Pin">
-      <a name="label" val="Enable"/>
-    </comp>
-    <comp lib="0" loc="(210,270)" name="Pin">
-      <a name="label" val="Clk"/>
-    </comp>
-    <comp lib="0" loc="(210,310)" name="Pin">
-      <a name="label" val="Reset"/>
-    </comp>
-    <comp lib="0" loc="(880,170)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="PC_Hold"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="0" loc="(880,210)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -1099,15 +1268,34 @@ end TCL_Generic;
       <a name="label" val="Rm"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(210,200)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="Stack_Pointer"/>
+    </comp>
     <comp lib="0" loc="(880,90)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Store"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(880,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="PC_Hold"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(210,130)" name="Pin">
+      <a name="label" val="Enable"/>
+    </comp>
+    <comp lib="0" loc="(210,270)" name="Pin">
+      <a name="label" val="Clk"/>
+    </comp>
     <comp lib="0" loc="(210,80)" name="Pin">
       <a name="width" val="16"/>
       <a name="label" val="Instruction"/>
+    </comp>
+    <comp lib="0" loc="(210,310)" name="Pin">
+      <a name="label" val="Reset"/>
     </comp>
   </circuit>
   <circuit name="SP_Address">
@@ -1128,36 +1316,26 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="325" y="83">Write_Enable</text>
       <rect height="4" stroke="none" width="10" x="330" y="78"/>
       <circ-port height="10" pin="910,150" width="10" x="335" y="55"/>
-      <circ-port height="8" pin="210,60" width="8" x="46" y="76"/>
-      <circ-port height="10" pin="910,80" width="10" x="335" y="75"/>
-      <circ-port height="8" pin="210,110" width="8" x="46" y="56"/>
       <circ-port height="8" pin="210,190" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="210,60" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="210,110" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="910,80" width="10" x="335" y="75"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="327" y="64">New_Stack_Pointer</text>
       <rect height="20" stroke="none" width="270" x="60" y="110"/>
       <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="270" x="60" y="50"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="195" y="124">SP_Address</text>
       <circ-anchor facing="east" height="6" width="6" x="337" y="57"/>
     </appear>
-    <comp lib="0" loc="(210,110)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="Instruction"/>
-    </comp>
-    <comp lib="0" loc="(210,60)" name="Pin">
-      <a name="label" val="Enable"/>
-    </comp>
     <comp lib="0" loc="(210,190)" name="Pin">
       <a name="width" val="32"/>
       <a name="label" val="Stack_Pointer"/>
     </comp>
-    <comp lib="8" loc="(212,41)" name="Text">
-      <a name="text" val="Pull output low on Enable = 0"/>
-      <a name="font" val="SansSerif plain 12"/>
+    <comp lib="0" loc="(210,60)" name="Pin">
+      <a name="label" val="Enable"/>
     </comp>
-    <comp lib="0" loc="(910,80)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Write_Enable"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(210,110)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Instruction"/>
     </comp>
     <comp lib="0" loc="(910,150)" name="Pin">
       <a name="facing" val="west"/>
@@ -1165,6 +1343,16 @@ end TCL_Generic;
       <a name="width" val="32"/>
       <a name="label" val="New_Stack_Pointer"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(910,80)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Write_Enable"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="8" loc="(212,41)" name="Text">
+      <a name="text" val="Pull output low on Enable = 0"/>
+      <a name="font" val="SansSerif plain 12"/>
     </comp>
   </circuit>
   <circuit name="Flags_APSR">
@@ -1174,16 +1362,12 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
+    <comp lib="0" loc="(190,200)" name="Pin">
+      <a name="label" val="Rst"/>
+    </comp>
     <comp lib="0" loc="(190,80)" name="Pin">
       <a name="width" val="4"/>
       <a name="label" val="Flags_In"/>
-    </comp>
-    <comp lib="0" loc="(190,120)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="label" val="Update_Mask"/>
-    </comp>
-    <comp lib="0" loc="(190,160)" name="Pin">
-      <a name="label" val="Clk"/>
     </comp>
     <comp lib="0" loc="(840,90)" name="Pin">
       <a name="facing" val="west"/>
@@ -1192,8 +1376,12 @@ end TCL_Generic;
       <a name="label" val="Flags_Out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(190,200)" name="Pin">
-      <a name="label" val="Rst"/>
+    <comp lib="0" loc="(190,160)" name="Pin">
+      <a name="label" val="Clk"/>
+    </comp>
+    <comp lib="0" loc="(190,120)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="Update_Mask"/>
     </comp>
   </circuit>
 </project>
