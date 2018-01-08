@@ -41,7 +41,7 @@ namespace P_ARM_AssemblyParser.Instructions
             }
 
             if (convertedInstruction == -1) 
-                throw new Exception("IntructionParser error: " + this.instruction);
+                throw new InstructionException("IntructionParser error: " + this.instruction);
 
             return convertedInstruction;
         }
